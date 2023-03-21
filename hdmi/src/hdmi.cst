@@ -1,0 +1,10 @@
+IO_LOC "O_tmds_clk_p" 33,34;
+IO_PORT "O_tmds_clk_p" PULL_MODE=NONE DRIVE=8;
+IO_LOC "O_tmds_data_p[0]" 35,36;
+IO_PORT "O_tmds_data_p[0]" PULL_MODE=NONE DRIVE=8;
+IO_LOC "O_tmds_data_p[1]" 37,38;
+IO_PORT "O_tmds_data_p[1]" PULL_MODE=NONE DRIVE=8;
+IO_LOC "O_tmds_data_p[2]" 39,40;
+IO_PORT "O_tmds_data_p[2]" PULL_MODE=NONE DRIVE=8;
+IO_LOC "I_clk" 4;
+IO_PORT "I_clk" PULL_MODE=UP;
