@@ -1,4 +1,12 @@
-IO_LOC "WS2812_Di" 79;
-IO_PORT "WS2812_Di" DRIVE=8;
+//Copyright (C)2014-2022 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: 1.9.8.09
+//Part Number: GW2AR-LV18QN88C8/I7
+//Device: GW2AR-18C
+//Created Time: Thu 03 23 10:49:15 2023
+
+IO_LOC "WS2812" 79;
+IO_PORT "WS2812" DRIVE=8;
 IO_LOC "clk" 4;
-IO_PORT "clk" PULL_MODE=NONE;
+IO_PORT "clk" PULL_MODE=UP;
