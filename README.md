@@ -1,12 +1,17 @@
 # TangNano-20K-example
 
 - [TangNano-20K-example](#tangnano-20k-example)
+  - [audio](#audio)
   - [hdmi](#hdmi)
   - [litex](#litex)
   - [rgb\_lcd](#rgb_lcd)
   - [uart](#uart)
   - [ws2812](#ws2812)
 
+
+## audio
+
+Demo to drive the onboard DAC
 
 ## hdmi
 
