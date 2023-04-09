@@ -19,7 +19,7 @@ Gowin_rPLL chip_pll
 
 VGAMod	VGAMod_inst
 (
-.nRST		(	Reset_Button),
+.nRST		(  !Reset_Button),
 
 .PixelClk	(	CLK_PIX		),
 .LCD_DE		(	LCD_DEN	 	),
