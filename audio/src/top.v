@@ -15,7 +15,6 @@ module top(
     output reg led
 );
 
-
 wire clk_6m_w;//6MHz,为产生1.5MHz
 wire clk_1p5m_w;//1.536MHz近似时钟
 
@@ -25,7 +24,6 @@ wire [15:0] q_w;//rom读出的数据
 reg [9:0] addr_r;//rom地址
 
 assign PA_EN = 1'b1;//PA常开
-
 
 always@(posedge clk_1p5m_w or negedge rst_n)
 if(!rst_n)
@@ -47,7 +45,6 @@ Gowin_CLKDIV clk_div4(
         .resetn(rst_n) //input resetn
     );
 
-
 rom_save_sin rom_save_sin_inst(
 .clk(clk),
 .rst_n(rst_n),
@@ -68,9 +65,6 @@ audio_drive u_audio_drive_0(
     .HP_DIN   (HP_DIN)//dac串行数据输入信号
 );
 
-
-
-
 reg [23:0] counter;        //定义一个变量来计数
 
 always @(posedge clk or negedge rst_n) begin // Counter block
@@ -88,7 +82,5 @@ always @(posedge clk or negedge rst_n) begin // Toggle LED
     else if (counter == 24'd1349_9999)       // 0.5s delay
         led <= ~led;                         // ToggleLED
 end
-
-
 
 endmodule
