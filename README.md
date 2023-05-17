@@ -7,6 +7,7 @@
   - [rgb\_lcd](#rgb_lcd)
   - [uart](#uart)
   - [ws2812](#ws2812)
+  - [nestang](#nestang)
 
 
 ## audio
@@ -38,3 +39,7 @@ FPGA can not be burned when the serial port is opened.
 ## ws2812
 
 A demo to drive onboard ws2812 rgb led.
+
+## nestang
+
+Thanks to [nand2mario](https://github.com/nand2mario) for providing this project, and read [guide](./nestang/README.md) to see how to build this project.
