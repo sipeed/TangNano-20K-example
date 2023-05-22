@@ -6,6 +6,10 @@ To start this, you need `a HDMI monitor`, a `Tang Nano 20K` and 2 `joysticks` an
 
 Burn the `nes.fs` into Tang Nano 20K FPGA, then this FPGA development board is a Retro emulator.
 
+Program the firmware into Flash to store this firmware. SRAM MODE does not store your firmware if no power.
+
+![nes_burn_into_flash](./../.assets/nes_burn_into_flash.png)
+
 2. Prepare Games
 
 Get your NES games, and use `tools/nes2img.py` to generate your games for playing.
@@ -49,7 +53,7 @@ This table is the default pin constrain of NESTang Project.
 
 Connect the joystick with the joystick convert board, connect the FPGA board with HDMI monitor, and power Tang Nano 20K, Start your game.
 
-Press 2 On joystick to strat the game.
+Press 2 On joystick to start the game.
 Press S1 key on the FPGA to switch to game selecting menu.
 
 5. Questions
