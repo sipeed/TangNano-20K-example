@@ -1,0 +1,129 @@
+
+/dts-v1/;
+
+/ {
+        #address-cells = <1>;
+        #size-cells    = <1>;
+
+
+        chosen {
+            bootargs = "console=liteuart earlycon=liteuart,0xf0001000";
+        };
+
+        cpus {
+            #address-cells = <1>;
+            #size-cells    = <0>;
+            timebase-frequency = <48000000>;
+
+            CPU0: cpu@0 {
+                device_type = "cpu";
+                compatible = "riscv";
+                riscv,isa = "rv32i2p0_ma";
+                mmu-type = "riscv,sv32";
+                reg = <0>;
+                clock-frequency = <48000000>;
+                status = "okay";
+                
+                d-cache-size = <4096>;
+                d-cache-sets = <1>;
+                d-cache-block-size = <64>;
+
+                i-cache-size = <4096>;
+                i-cache-sets = <1>;
+                i-cache-block-size = <64>;
+
+                
+                d-tlb-size = <4>;
+                d-tlb-sets = <4>;
+
+                i-tlb-size = <4>;
+                i-tlb-sets = <4>;
+
+                L0: interrupt-controller {
+                    #interrupt-cells = <0x00000001>;
+                    interrupt-controller;
+                    compatible = "riscv,cpu-intc";
+                };
+            };
+
+            
+        };
+
+        memory@40000000 {
+            device_type = "memory";
+            reg = <0x40000000 0x800000>;
+        };
+
+        reserved-memory {
+            #address-cells = <1>;
+            #size-cells    = <1>;
+            ranges;
+
+            opensbi@407c0000 {
+                reg = <0x407c0000 0x20000>;
+            };
+
+        };
+
+        clocks {
+            sys_clk: litex_sys_clk {
+                #clock-cells = <0>;
+                compatible = "fixed-clock";
+                clock-frequency = <48000000>;
+            };
+        };
+
+        soc {
+            #address-cells = <1>;
+            #size-cells    = <1>;
+            compatible = "simple-bus";
+            interrupt-parent = <&intc0>;
+            ranges;
+
+            soc_ctrl0: soc_controller@f0000800 {
+                compatible = "litex,soc-controller";
+                reg = <0xf0000800 0xc>;
+                status = "okay";
+            };
+
+            intc0: interrupt-controller@f0c00000 {
+                compatible = "sifive,fu540-c000-plic", "sifive,plic-1.0.0";
+                reg = <0xf0c00000 0x400000>;
+                #address-cells = <0>;
+                #interrupt-cells = <1>;
+                interrupt-controller;
+                interrupts-extended = <
+                    &L0 11 &L0 9>;
+                riscv,ndev = <32>;
+            };
+
+            liteuart0: serial@f0001000 {
+                compatible = "litex,liteuart";
+                reg = <0xf0001000 0x100>;
+                interrupts = <1>;
+                status = "okay";
+            };
+
+            leds: gpio@f0002800 {
+                compatible = "litex,gpio";
+                reg = <0xf0002800 0x4>;
+                gpio-controller;
+                #gpio-cells = <2>;
+                litex,direction = "out";
+                status = "disabled";
+            };
+
+        };
+
+        aliases {
+
+                serial0 = &liteuart0;
+
+        };
+
+};
+
+&leds {
+        litex,ngpio = <4>;
+        status = "okay";
+};

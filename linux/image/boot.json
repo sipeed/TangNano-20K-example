@@ -1,0 +1,5 @@
+{
+	"Image":			"0x40000000",
+	"sipeed_tang_nano_20k.dtb":	"0x40780000",
+	"opensbi.bin.tangnano20k":	"0x407c0000"
+}

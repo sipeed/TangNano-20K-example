@@ -1,0 +1,3 @@
+[submodule "riscv_core/SparrowRV"]
+	path = riscv_core/SparrowRV
+	url = https://gitee.com/xiaowuzxc/SparrowRV

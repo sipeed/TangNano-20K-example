@@ -1,5 +1,13 @@
 # TangNano-20K-example
 
+---
+- IDE 基础使用步骤:[点我](https://wiki.sipeed.com/hardware/zh/tang/tang-nano-20k/example/led.html)
+- IDE Instructions:[Click me](https://wiki.sipeed.com/hardware/en/tang/tang-nano-20k/example/led.html)
+---
+- 配置 MS5351:[点我](https://wiki.sipeed.com/hardware/zh/tang/tang-nano-20k/example/unbox.html)
+- Config MS5351:[Click me](https://wiki.sipeed.com/hardware/en/tang/tang-nano-20k/example/unbox.html)
+---
+
 - [TangNano-20K-example](#tangnano-20k-example)
   - [audio](#audio)
   - [hdmi](#hdmi)
@@ -8,6 +16,9 @@
   - [uart](#uart)
   - [ws2812](#ws2812)
   - [nestang](#nestang)
+  - [linux](#linux)
+  - [riscv\_core](#riscv_core)
+    - [SparrowRV](#sparrowrv)
 
 
 ## audio
@@ -43,3 +54,13 @@ A demo to drive onboard ws2812 rgb led.
 ## nestang
 
 Thanks to [nand2mario](https://github.com/nand2mario) for providing this project, and read [guide](./nestang/README.md) to see how to build this project.
+
+## linux
+
+A linux demo based on [Linux-on-LiteX-VexRiscv](https://github.com/litex-hub/linux-on-litex-vexriscv).
+
+## riscv_core
+
+### SparrowRV
+
+A Risc-V architecture open source core. Run `git submodule --init update` to get the code.
