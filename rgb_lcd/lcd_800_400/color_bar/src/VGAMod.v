@@ -5,8 +5,6 @@ module VGAMod
     input                   PixelClk,
 
     output                  LCD_DE,
-    output                  LCD_HSYNC,
-    output                  LCD_VSYNC,
 
 	output          [4:0]   LCD_B,
 	output          [5:0]   LCD_G,
@@ -26,12 +24,8 @@ module VGAMod
 	localparam      WidthPixel  = 16'd800; 
 	localparam      H_FrontPorch= 16'd210;
 
-
-
-
     parameter       BarCount    = 16; // RGB565
-    localparam      Width_bar   = WidthPixel / 16;
-    
+    localparam      Width_bar   = WidthPixel / 16;    
  
     localparam      PixelForHS  =   WidthPixel + H_BackPorch + H_FrontPorch;  	
     localparam      LineForVS   =   HightPixel + V_BackPorch + V_FrontPorch;
@@ -51,13 +45,7 @@ module VGAMod
             end
         else
             PixelCount      <=  PixelCount + 1'b1;
-    end
-
-	//注意这里HSYNC和VSYNC负极性
-    assign  LCD_HSYNC = (( PixelCount >= H_Pluse)&&( PixelCount <= (PixelForHS-H_FrontPorch))) ? 1'b0 : 1'b1;
-    
-	assign  LCD_VSYNC = ((( LineCount  >= V_Pluse )&&( LineCount  <= (LineForVS-0) )) ) ? 1'b0 : 1'b1;
-    
+    end    
 
     assign  LCD_DE = (  ( PixelCount >= H_BackPorch )&&
                         ( PixelCount <= PixelForHS-H_FrontPorch ) &&

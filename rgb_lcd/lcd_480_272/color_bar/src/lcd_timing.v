@@ -4,8 +4,6 @@ module lcd_timing
     input                   nRST,
 
     output                  LCD_DE,
-    output                  LCD_HSYNC,
-    output                  LCD_VSYNC,
 
 	output          [4:0]   LCD_B,
 	output          [5:0]   LCD_G,
@@ -51,10 +49,6 @@ module lcd_timing
     end
 
     // SYNC-DE MODE
-    
-    assign  LCD_HSYNC = H_PixelCount <= (PixelForHS-H_FrontPorch) ? 1'b0 : 1'b1;
-    
-	assign  LCD_VSYNC = V_PixelCount  <= (PixelForVS-0)  ? 1'b0 : 1'b1;
 
     assign  LCD_DE =    ( H_PixelCount >= H_BackPorch ) && ( H_PixelCount <= H_Pixel_Valid + H_BackPorch ) &&
                         ( V_PixelCount >= V_BackPorch ) && ( V_PixelCount <= V_Pixel_Valid + V_BackPorch ) && PixelClk;

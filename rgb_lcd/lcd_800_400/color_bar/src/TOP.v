@@ -2,8 +2,6 @@ module TOP (
     input           Reset_Button,
     input           XTAL_IN,
     output          LCD_CLK,
-    output			LCD_HYNC,
-    output			LCD_SYNC,
     output			LCD_DEN,
     output	[4:0]	LCD_R,
     output	[5:0]	LCD_G,
@@ -23,8 +21,6 @@ VGAMod	VGAMod_inst
 
 .PixelClk	(	CLK_PIX		),
 .LCD_DE		(	LCD_DEN	 	),
-.LCD_HSYNC	(	LCD_HYNC 	),
-.LCD_VSYNC	(	LCD_SYNC 	),
 
 .LCD_B		(	LCD_B		),
 .LCD_G		(	LCD_G		),
