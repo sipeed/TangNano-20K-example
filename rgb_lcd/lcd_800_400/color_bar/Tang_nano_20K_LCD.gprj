@@ -3,7 +3,7 @@
 <Project>
     <Template>FPGA</Template>
     <Version>5</Version>
-    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88PC8/I7">gw2ar18c-011</Device>
+    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C8/I7">gw2ar18c-000</Device>
     <FileList>
         <File path="src/TOP.v" type="file.verilog" enable="1"/>
         <File path="src/VGAMod.v" type="file.verilog" enable="1"/>
