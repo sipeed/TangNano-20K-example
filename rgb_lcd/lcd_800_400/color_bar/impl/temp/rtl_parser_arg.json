@@ -1,0 +1,25 @@
+{
+ "Device" : "GW2AR-18C",
+ "Files" : [
+  {
+   "Path" : "F:/TangNano-20K-example/rgb_lcd/lcd_800_400/color_bar/src/TOP.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "F:/TangNano-20K-example/rgb_lcd/lcd_800_400/color_bar/src/VGAMod.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "F:/TangNano-20K-example/rgb_lcd/lcd_800_400/color_bar/src/gowin_rpll/gowin_rpll.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "F:/TangNano-20K-example/rgb_lcd/lcd_800_400/color_bar/impl/temp/rtl_parser.result",
+ "Top" : "TOP",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}

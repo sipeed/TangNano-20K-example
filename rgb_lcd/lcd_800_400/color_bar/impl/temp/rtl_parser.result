@@ -1,0 +1,28 @@
+[
+ {
+  "InstFile" : "F:/TangNano-20K-example/rgb_lcd/lcd_800_400/color_bar/src/TOP.v",
+  "InstLine" : 1,
+  "InstName" : "TOP",
+  "ModuleFile" : "F:/TangNano-20K-example/rgb_lcd/lcd_800_400/color_bar/src/TOP.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "TOP",
+  "SubInsts" : [
+   {
+    "InstFile" : "F:/TangNano-20K-example/rgb_lcd/lcd_800_400/color_bar/src/TOP.v",
+    "InstLine" : 11,
+    "InstName" : "chip_pll",
+    "ModuleFile" : "F:/TangNano-20K-example/rgb_lcd/lcd_800_400/color_bar/src/gowin_rpll/gowin_rpll.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "Gowin_rPLL"
+   },
+   {
+    "InstFile" : "F:/TangNano-20K-example/rgb_lcd/lcd_800_400/color_bar/src/TOP.v",
+    "InstLine" : 18,
+    "InstName" : "VGAMod_inst",
+    "ModuleFile" : "F:/TangNano-20K-example/rgb_lcd/lcd_800_400/color_bar/src/VGAMod.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "VGAMod"
+   }
+  ]
+ }
+]

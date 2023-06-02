@@ -1,0 +1,26 @@
+IO_LOC "lcd_b[4]" 27;
+IO_LOC "lcd_b[3]" 28;
+IO_LOC "lcd_b[2]" 29;
+IO_LOC "lcd_b[1]" 30;
+IO_LOC "lcd_b[0]" 31;
+
+IO_LOC "lcd_g[5]" 32;
+IO_LOC "lcd_g[4]" 33;
+IO_LOC "lcd_g[3]" 34;
+IO_LOC "lcd_g[2]" 35;
+IO_LOC "lcd_g[1]" 36;
+IO_LOC "lcd_g[0]" 37;
+
+IO_LOC "lcd_r[4]" 38;
+IO_LOC "lcd_r[3]" 39;
+IO_LOC "lcd_r[2]" 40;
+IO_LOC "lcd_r[1]" 41;
+IO_LOC "lcd_r[0]" 42;
+
+IO_LOC "lcd_vsync" 26;
+IO_LOC "lcd_hsync" 25;
+IO_LOC "lcd_de" 48;
+IO_LOC "lcd_clk" 77;
+
+IO_LOC "clk" 4;
+IO_LOC "rst" 88;
