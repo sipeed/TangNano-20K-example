@@ -1,29 +1,25 @@
 module top(
     input        clk      ,
-    input        rst_n    , //S1按键
-    //SD卡接口
-    input        sd_miso  , //SD卡SPI串行输入数据信号
-    output       sd_clk   , //SD卡SPI时钟信号
-    output       sd_cs    , //SD卡SPI片选信号
-    output       sd_mosi  , //SD卡SPI串行输出数据信号
+    input        rst    , //S1按键
+    
     //audio接口
     output       HP_BCK   , //同clk_1p536m
     output       HP_WS    , //左右声道切换信号，低电平对应左声道
     output       HP_DIN   , //dac串行数据输入信号
     output       PA_EN    , //音频功放使能，高电平有效
 
-    output reg led
+    output reg   led
 );
-
 wire clk_6m_w;//6MHz,为产生1.5MHz
 wire clk_1p5m_w;//1.536MHz近似时钟
 
 wire req_w;//读请求
-wire rd_empty;//fifo read empty
 wire [15:0] q_w;//rom读出的数据
 reg [9:0] addr_r;//rom地址
 
 assign PA_EN = 1'b1;//PA常开
+
+assign rst_n = !rst ;
 
 always@(posedge clk_1p5m_w or negedge rst_n)
 if(!rst_n)

@@ -23,7 +23,7 @@
 
 ## audio
 
-Demo to drive the onboard DAC
+Demo to drive the onboard DAC. A bit loud.
 
 ## hdmi
 
