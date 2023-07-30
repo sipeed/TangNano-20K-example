@@ -63,4 +63,4 @@ A linux demo based on [Linux-on-LiteX-VexRiscv](https://github.com/litex-hub/lin
 
 ### SparrowRV
 
-A Risc-V architecture open source core. Run `git submodule --init update` to get the code.
+A Risc-V architecture open source core. Run command `git submodule update --init --recursive` in `TangNano-20K-example` folder to get the code.
