@@ -4,6 +4,11 @@ These are the example steps to build the litex firmware, if you have trouble, ne
 
 If you want to know more about litex, read [litex](https://github.com/enjoy-digital/litex) or [litex wiki](https://github.com/enjoy-digital/litex/wiki).
 
+## Requirements
+
+OS: Latest linux version, X86/X64 platform.
+Software: `pythons` `git` ``pip
+
 ## Install litex
 
 > This takes a long time
