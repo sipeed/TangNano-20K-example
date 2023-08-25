@@ -7,7 +7,7 @@ If you want to know more about litex, read [litex](https://github.com/enjoy-digi
 ## Requirements
 
 OS: Latest linux version, X86/X64 platform.
-Software: `pythons` `git` ``pip
+Software: `pythons` `git` `pip`
 
 ## Install litex
 
@@ -69,3 +69,7 @@ Make sure you have install litex successfully.
 If you install litex, you can see there are applications like `litex_cli` in `~/.local/bin/` directory.
 
 And reboot computer may fix this.
+
+### No response when running `tar xvf ~/gowin/Gowin* -C ~/gowin/`
+
+Make sure only one Gowin_IDE insall package is the `~/gowin/`, Use command `ls ~/gowin/Gowin*` to check the mount of Gowin_IDE insall package.
